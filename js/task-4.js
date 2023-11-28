@@ -1,14 +1,13 @@
-const number = [1, 5, 8,9, 12, 4, 15, 27, 30, 18, 11];
-let total = 0;
-
-for (let i = 0; i < number.length; i += 1){
-    console.log(number[i]);
-    if (number[i] % 2 === 0) {
-        console.log('UHHHHH')
-
-        total += number[i];
+function getCommonElements(array1, array2) {
+    const result = [];
+    for (let i = array1; i <= array2.length; i++){
+        if (array2.includes([i])) {
+            result.push([i]);
+        }
     }
-    
+    console.log(result);
+ }
 
-    console.log('Total:', total);
-}
+getCommonElements([1, 2, 3], [2, 4]);
+getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
